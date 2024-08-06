@@ -15,6 +15,11 @@
     https://qiita.com/ryotaro76/items/305d4d61dfd82e3f2bfa
 1. windowsおよびWSL2上の任意のディレクトリにこのリポジトリをclone
 1. windows側の`setup_env.bat`をダブルクリックで実行してpythonの仮想環境を構築(少し時間がかかる)
+    ```
+    ok!
+    続行するには何かキーを押してください . . .
+    ```
+    以上のように表示されるまで待つ
 
 ### 起動(使いたいとき)
 1. (サーバーの起動) wsl2上で以下のようにコマンド`docker compose up -d`を実行

@@ -6,7 +6,7 @@
 1. ホストOS上で無線機(今回はESP-32)とのデータのやり取りを行うPythonIFを起動
 1. その他の補助的なUIを起動(コマンド送信/姿勢viewerなど)
 
-### 環境構(最初の1回のみ)
+### 環境構築(最初の1回のみ)
 1. pythonをインストール
     https://learn.microsoft.com/ja-jp/windows/python/beginners#install-python
 1. WSL2をインストール

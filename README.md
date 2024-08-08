@@ -22,14 +22,15 @@
     以上のように表示されるまで待つ
 
 ### 起動(使いたいとき)
-1. (サーバーの起動) wsl2上で以下のようにコマンド`docker compose up -d`を実行
+1. (サーバーの起動) 先ずはwsl2上でディレクトリを移動`ASE-SAT_GroundStation`移動できたら以下のようにコマンド`docker compose up -d`を実行
     ```
-    mission5-ground-station$ docker compose up -d
+    ASE-SAT_GroundStation$ docker compose up -d
     ```
-1. (地上局テレメ画面の起動) `http://localhost:8085/dashboards`にアクセス
+1. (地上局テレメ画面の起動) ブラウザで`http://localhost:8085/dashboards`にアクセス
     
-    今のところユーザー名はadminでパスワードもadmin
-1. (地上局コマンドCUIの起動) `Python_IF.bat`を実行
+    今のところユーザー名は`admin`でパスワードも`admin`
+    警告が出るが無視してOK
+1. (地上局コマンドCUIの起動)これ以降`Windows(ホストOS側)`での操作 `PythonIF_Open.bat`を実行
 
     COMPortとbaudを入力 (baudは入力せずにEnterでOK)
 1. (3DViewerの起動) `Attitude_view.bat`を実行

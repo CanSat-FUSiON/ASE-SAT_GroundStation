@@ -1,13 +1,13 @@
 # ASE-Sat Lite 地上局
 
 ## 使い方
-- windowsを想定
+- `windows`を想定
 1. WSL2上でDockerを起動してデータベースであるInfluxDBおよび可視化ツールであるGrafanaを動作させる
 1. ホストOS上で無線機(今回はESP-32)とのデータのやり取りを行うPythonIFを起動
 1. その他の補助的なUIを起動(コマンド送信/姿勢viewerなど)
 
 ### 環境構築(最初の1回のみ)
-1. pythonをインストール
+1. pythonをインストール(`Python3.11`にしてるとうまくいく)
     https://learn.microsoft.com/ja-jp/windows/python/beginners#install-python
 1. WSL2をインストール
     https://learn.microsoft.com/ja-jp/windows/wsl/install
@@ -22,17 +22,23 @@
     以上のように表示されるまで待つ
 
 ### 起動(使いたいとき)
-1. (サーバーの起動) 先ずはwsl2上でディレクトリを移動`ASE-SAT_GroundStation`移動できたら以下のようにコマンド`docker compose up -d`を実行
+1. (サーバーの起動) 先ずは`wsl2`上でディレクトリを移動  
+    - `ASE-SAT_GroundStation`移動できたら以下のように
+    - コマンド`docker compose up -d`を実行
     ```
     ASE-SAT_GroundStation$ docker compose up -d
     ```
-1. (地上局テレメ画面の起動) ブラウザで`http://localhost:8085/dashboards`にアクセス
+1. (地上局テレメ画面の起動) ブラウザで
+    ```
+    http://localhost:8085/dashboards
+    ```
     
-    今のところユーザー名は`admin`でパスワードも`admin`
-    警告が出るが無視してOK
+    - 今のところユーザー名は`admin`でパスワードも`admin`
+    - 警告が出るが無視してOK
 1. (地上局コマンドCUIの起動)これ以降`Windows(ホストOS側)`での操作 `PythonIF_Open.bat`を実行
-
-    COMPortとbaudを入力 (baudは入力せずにEnterでOK)
+    - COMPortとbaudを入力 (baudは入力せずにEnterでOK)
+        - COMPortは`COM〇〇`のように記入
+    - COMの番号は`デバイスマネージャ`から確認できます
 1. (3DViewerの起動) `Attitude_view.bat`を実行
 1. (地上局コマンドGUIの起動) `CommandUI.bat`を実行
 

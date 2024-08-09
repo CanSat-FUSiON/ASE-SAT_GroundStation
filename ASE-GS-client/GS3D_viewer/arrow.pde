@@ -35,7 +35,7 @@ void arrow(float x1, float y1, float z1, float x2, float y2, float z2, float Col
     float phi = -atan2(y2-y1, x2-x1);
     float theta = 0.5*PI - atan2(z2-z1, x2-x1);
     stroke(Color1, Color2, Color3);
-    strokeWeight(4); 
+    //strokeWeight(4); 
     line(x1, y1, z1, x2, y2, z2);
     strokeWeight(1); 
     pushMatrix();
